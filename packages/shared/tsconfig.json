@@ -8,6 +8,6 @@
       "@xc/shared/*": ["../../packages/shared/src/*"]
     }
   },
-  "include": ["../../types/*.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["../../types/*.ts", "**/*.ts", "**/*.tsx", "../../projects/WestMonroe/src/app/(main)/blogs/data/getBlogPage.ts"],
   "exclude": ["node_modules"]
 }

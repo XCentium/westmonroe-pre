@@ -1,7 +1,7 @@
 import type { LivePreviewQuery } from 'contentstack'
 
 import Result from '@xc/lib/Result'
-import { blog } from '@xc/shared/clients/contentstack'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 
 export type GenericPageData = Contentstack.Item<{
   modular_blocks_main: Record<string, any>[]
@@ -15,7 +15,7 @@ export default async function getGenericPage({
   path: string
   preview?: LivePreviewQuery
 }): Promise<Result<GenericPageData>> {
-  const result = await blog.api.find<GenericPageData>('page_generic', preview, (query) => {
+  const result = await westMonroe.api.find<GenericPageData>('page_generic', preview, (query) => {
     return query.where('url', path).toJSON()
   })
 

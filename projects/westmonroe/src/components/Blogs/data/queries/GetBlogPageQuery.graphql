@@ -1,0 +1,46 @@
+query GetBlogPageQuery {
+    blog_post(uid: "blt144cb1e3ec8f1b46", locale: "en-us") {
+      title,
+      posted_on,
+      read_time,
+      body,
+      author_name,
+      authorConnection{
+          totalCount
+          edges {
+          node {
+              ... on
+              Author {
+                         title,
+                         imageConnection{
+                             edges{
+                                 node{
+                                    title
+                                 }
+                             }
+                         },
+                         details
+              }
+            }
+        }
+     },
+     categoryConnection{
+          totalCount
+          edges {
+          node {
+              ... on
+              BlogCategory {
+                         title
+              }
+            }
+        }
+     },
+      featured_imageConnection {
+          edges {
+              node{
+                  title
+              }
+          }
+      }
+    }
+}

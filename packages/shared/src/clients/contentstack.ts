@@ -2,7 +2,7 @@ import { createURL } from '@xc/lib/http'
 import { createContentstackClient } from '@xc/lib/contentstack'
 import { createApolloClient } from '@xc/lib/apollo'
 
-export const blog = {
+export const westMonroe = {
   api: createContentstackClient({
     key: process.env.NEXT_PUBLIC_CONTENTSTACK_API_KEY,
     token: process.env.CONTENTSTACK_DELIVERY_TOKEN,

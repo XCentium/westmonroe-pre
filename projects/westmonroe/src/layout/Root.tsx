@@ -1,4 +1,4 @@
-import type { RootLayoutData } from '@xc/shared/data/blog/getRootLayout'
+import type { RootLayoutData } from '@xc/shared/data/westmonroe/getRootLayout'
 
 import Header from './Header'
 

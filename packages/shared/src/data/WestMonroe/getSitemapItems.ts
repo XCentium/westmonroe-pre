@@ -1,12 +1,12 @@
 import type { SitemapItem } from '@xc/lib/sitemap'
 
 import Result from '@xc/lib/Result'
-import { blog } from '@xc/shared/clients/contentstack'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 
 export type SitemapItemsData = SitemapItem[]
 
 const getPagesEntries = async (type: string) => {
-  const result = await blog.api.find(type, null, (query) => {
+  const result = await westMonroe.api.find(type, null, (query) => {
     return query.only(['url', 'updated_at']).toJSON()
   })
 

@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import createMetadataGenerator from '@xc/lib/createMetadataGenerator'
-import getHomePage from '@xc/shared/data/blog/getHomePage'
+import getHomePage from '@xc/shared/data/westmonroe/getHomePage'
 
-import HeroSection from '@xc/ui/HeroSection'
+import HeroSection from '@/components/HeroSection'
 
 export { dynamic, revalidate } from '@/ssr'
 

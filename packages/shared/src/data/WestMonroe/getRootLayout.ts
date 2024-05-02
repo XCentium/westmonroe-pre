@@ -1,5 +1,5 @@
 import Result from '@xc/lib/Result'
-import { blog } from '@xc/shared/clients/contentstack'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 
 export type RootLayoutData = Contentstack.Item<{
   image_header_logo: Contentstack.Fields.File
@@ -11,7 +11,7 @@ export type RootLayoutData = Contentstack.Item<{
 }>
 
 export default async function getRootLayout(): Promise<Result<RootLayoutData>> {
-  const result = await blog.api.find<RootLayoutData>('layout_root', null, (query) => {
+  const result = await westMonroe.api.find<RootLayoutData>('layout_root', null, (query) => {
     return query.toJSON()
   })
 
