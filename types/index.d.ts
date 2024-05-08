@@ -31,7 +31,10 @@ declare namespace NodeJS {
     readonly NEXT_PUBLIC_CONTENTSTACK_LIVE_PREVIEW: string
     readonly NEXT_PUBLIC_CONTENTSTACK_ENVIRONMENT: string
     readonly NEXT_PUBLIC_CONTENTSTACK_API_KEY: string
+    readonly NEXT_PUBLIC_CONTENTSTACK_MANAGEMENT_TOKEN: string
+    readonly NEXT_PUBLIC_CONTENTSTACK_AUTH_TOKEN: string
     readonly NEXT_PUBLIC_CONTENTSTACK_API_HOST: string
+    readonly NEXT_PUBLIC_CONTENTSTACK_APP_HOST: string
     // Application
     readonly APP_WEBHOOK_TOKEN: string
     readonly APP_PAGE_TYPES: string
