@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import EntryService from '@/common/datamigration/services/EntryService'
-import { entry } from '@/common/datamigration/types/Entry'
+import { BlogPostEntry } from '@/common/datamigration/types/Entry'
+
+
+let blogPostEntries: BlogPostEntry[]
 
 const DataMigration = () => {
   useEffect(() => {
@@ -8,10 +11,23 @@ const DataMigration = () => {
   })
 
   const getData = async () => {
-    let setEntryData: entry = { title: '', locale: '', uid: '', url: '' }
     await EntryService.createAnEntry().then((response: any) => {
-      if (response != null && response.ok == true && response.data != null) {
-        setEntryData.title = response.data.title
+
+      console.log("respone from here sdc", response)
+
+      if (response != null && response.data != null) {
+         console.log("respone from here", response)
+
+         response.map((post: any)  => {
+
+          /*
+          blogPostEntries.map(post => {
+            title = post?.data?.
+          })
+          */
+         })
+
+
       } else {
       }
     })

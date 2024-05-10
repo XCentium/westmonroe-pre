@@ -1,7 +1,7 @@
 import Result from '@/core/result'
 import settings from '@/common/settings'
 import axios from 'axios'
-import { createdEntryData, entry } from '../types/Entry'
+import posts from '../services/data/blog_posts_data.json'
 
 const createAnEntry = async () => {
   const origin = 'https://' + settings.contentstack.env.apiHost
@@ -18,31 +18,31 @@ const createAnEntry = async () => {
   }
 
   try {
-    const result = await axios.post<createdEntryData>(
-      url,
-      {
-        entry: {
-          title: 'This is a blog',
-          author_name: 'Bartee Natarajan',
-        },
+    await Promise.all(
+      posts.map((post) =>
+        axios.post<Response[]>(
+          url,
+          {
+            entry: post,
+          },
+          options,
+        ),
+      ),
+    ).then(
+      (response) => {
+        console.log('response is', response)
+        return Result.success(response)
       },
-      options,
+      (error) => {
+        return Result.fail(error)
+      },
     )
-
-    if (result?.status == 201) {
-      console.log('Result is', result?.data?.entry)
-      return Result.success(result?.data?.entry)
-    } else {
-      console.log('in-error')
-      return Result.fail('fail')
-    }
   } catch (error) {
     return Result.fail('fail')
   }
-
 }
 const EntryService = {
-  createAnEntry,
+  createAnEntry
 }
 
 export default EntryService

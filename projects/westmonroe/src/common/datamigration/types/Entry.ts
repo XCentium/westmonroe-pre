@@ -1,10 +1,8 @@
-export type entry = {
+export type BlogPostEntry = {
   title: string
   locale: string
   uid: string
   url: string
-}
-export type createdEntryData = {
-  notice: string
-  entry: entry
+  authorName: string
+  body:string
 }

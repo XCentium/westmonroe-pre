@@ -9,7 +9,16 @@ export type BlogPageData = {
     read_time: string,
     body:string,
     author_name:string,
-
+    featured_imageConnection:{
+      edges:[
+        {
+          node:{
+            title:string,
+            url:string
+          }
+        }
+      ]
+    }
   }
 }
 
