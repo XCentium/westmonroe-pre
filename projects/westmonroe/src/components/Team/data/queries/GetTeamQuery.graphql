@@ -1,0 +1,22 @@
+query GetTeamMembers{
+    all_team_member(locale: "en-us", limit:100) {
+      total
+      items {
+        title,
+        position,
+        short_bio,
+        url,
+        system {
+            uid
+        }
+        pictureConnection {
+        edges {
+            node{
+                title,
+                url
+            }
+        }
+      }
+      }
+    }
+}
