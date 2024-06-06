@@ -9,6 +9,7 @@ const settings = {
     entries: {
       blog_post_entries: `/v3/content_types/blog_post/entries`,
       team_member_entries: `/v3/content_types/team_member/entries`,
+      news_article_entries: `/v3/content_types/news_article/entries`,
     },
   },
 }
