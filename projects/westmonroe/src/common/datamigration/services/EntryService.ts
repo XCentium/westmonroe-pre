@@ -1,10 +1,10 @@
 import Result from '@/core/result'
 import settings from '@/common/settings'
 import axios from 'axios'
-import posts from '../services/data/news_articles_data.json'
+import posts from '../services/data/team_members_data.json'
 const createAnEntry = async () => {
   const origin = 'https://' + settings.contentstack.env.apiHost
-  const pathname = settings.contentstack.entries.news_article_entries
+  const pathname = settings.contentstack.entries.team_member_entries
   const url = origin + pathname
 
   const options = {

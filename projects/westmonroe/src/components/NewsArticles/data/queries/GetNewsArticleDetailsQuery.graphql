@@ -37,11 +37,18 @@ query GetNewsArticleDetails($uid: String!) {
       }
       ... on NewsArticleModulesImageFullWidth {
         image_full_width {
+          headline
+          fileConnection {
+            edges {
+              node {
+                title
+                url
+              }
+            }
+          }
           fullwidth
           boolean
           caption
-          headline
-          inline
         }
       }
       ... on NewsArticleModulesImageAndTextBlock {

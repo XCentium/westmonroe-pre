@@ -1,21 +1,25 @@
 query GetTeamMemberDetails($uid: String!) {
-     team_member(uid:$uid, locale: "en-us") {
-        title,
-        first_name,
-        last_name,
-        position,
-        bio,
-        differentiation,
-        impact
-        short_bio,
-        url,
-        pictureConnection {
-        edges {
-            node{
-                title,
-                url
-            }
+  team_member(uid: $uid, locale: "en-us") {
+    title
+    first_name
+    last_name
+    position
+    bio
+    differentiation
+    impact
+    short_bio
+    url
+    pictureConnection {
+      edges {
+        node {
+          title
+          url
         }
-        }
+      }
     }
+    linkedin_profile {
+      title
+      href
+    }
+  }
 }

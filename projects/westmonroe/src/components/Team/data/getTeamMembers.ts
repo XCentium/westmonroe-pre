@@ -3,25 +3,29 @@ import { westMonroe } from '@xc/shared/clients/contentstack'
 import GetTeamMembers from './queries/GetTeamQuery.graphql'
 
 export type TeamPageData = {
- teamMembers : TeamMember[];
+  teamMembers: TeamMember[]
 }
 export type TeamMember = {
+  title: string
+  position: string
+  short_bio: string
+  url: string
+  linkedin_profile: {
     title: string
-    position: string,
-    short_bio: string,
-    url:string,
-    system:{
-      uid:string
-    },
-    pictureConnection:{
-      edges:[
-        {
-          node:{
-            title:string,
-            url:string
-          }
+    href: string
+  }
+  system: {
+    uid: string
+  }
+  pictureConnection: {
+    edges: [
+      {
+        node: {
+          title: string
+          url: string
         }
-      ]
+      },
+    ]
   }
 }
 export default async function getTeamMembers(): Promise<Result<TeamPageData>> {
@@ -33,7 +37,7 @@ export default async function getTeamMembers(): Promise<Result<TeamPageData>> {
   }
 
   const item: TeamPageData = {
-    teamMembers: response.data["all_team_member"]["items"]
+    teamMembers: response.data['all_team_member']['items'],
   }
   return Result.success(item)
 }

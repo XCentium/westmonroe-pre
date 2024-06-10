@@ -2,6 +2,30 @@ import Result from '@xc/lib/Result'
 import { westMonroe } from '@xc/shared/clients/contentstack'
 import GetNewsArticleDetails from './queries/GetNewsArticleDetailsQuery.graphql'
 
+export type RichText = {
+  __typename: string
+  use_plain_text_styling: boolean
+  rich_text_editor: string
+  is_quote: boolean
+}
+
+export type FullWidthImage = {
+  headline: string
+  fileConnection: {
+    edges: [
+      {
+        node: {
+          title: string
+          url: string
+        }
+      },
+    ]
+  }
+  fullwidth: boolean
+  boolean: boolean
+  caption: string
+}
+
 export type NewsArticleDetails = {
   newsArticle: {
     title: string
@@ -30,25 +54,8 @@ export type NewsArticleDetails = {
     modules: [
       {
         __typename: string
-        richtext: {
-          __typename: string
-          use_plain_text_styling: boolean
-          rich_text_editor: string
-          is_quote: boolean
-        }
-      },
-    ]
-    fullWidthImageModules: [
-      {
-        __typename: string
-
-        image_full_width: {
-          fullwidth: boolean
-          boolean: boolean
-          caption: string
-          headline: string
-          inline: boolean
-        }
+        richtext: RichText
+        image_full_width: FullWidthImage
       },
     ]
   }
