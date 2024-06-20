@@ -18,10 +18,15 @@ export default async function Page({}: Core.Page<{ path: string }>) {
   }
   console.log("result is---", result?.data?.blogPage)
   return (
-    <>
-      <div>{result?.data?.blogPage?.author_name}</div>
+
+<>
+
+      <p></p>
+      <h2>{result.data?.blogPage?.title}</h2>
+      <img src = {result?.data?.blogPage?.featured_imageConnection["edges"][0].node.url}></img>
+      <p>{result?.data?.blogPage?.author_name}</p>
       <div>{result.data?.blogPage?.body}</div>
-      <div>{result.data?.blogPage?.title}</div>
+
       {/* <Contentstack.ModularBlocks
         entries={result.data.modular_blocks_main}
         components={{

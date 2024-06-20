@@ -39,6 +39,7 @@ query GetBlogPageQuery {
           edges {
               node{
                   title
+                  url
               }
           }
       }

@@ -1,0 +1,67 @@
+query GetNewsArticleDetails($uid: String!) {
+  news_article(uid: $uid, locale: "en-us") {
+    title
+    name
+    date
+    hide_x_minutes_to_read
+    time_to_read_override
+    summary_info {
+      summary_title
+      summary_imageConnection {
+        edges {
+          node {
+            title
+            url
+          }
+        }
+      }
+    }
+    global_field {
+      meta_title
+      meta_description
+    }
+    url
+    modules {
+      __typename
+      ... on NewsArticleModulesRichtext {
+        richtext {
+          use_plain_text_styling
+          rich_text_editor
+        }
+      }
+      ... on NewsArticleModulesRichtext {
+        richtext {
+          rich_text_editor
+          is_quote
+        }
+      }
+      ... on NewsArticleModulesImageFullWidth {
+        image_full_width {
+          headline
+          fileConnection {
+            edges {
+              node {
+                title
+                url
+              }
+            }
+          }
+          fullwidth
+          boolean
+          caption
+        }
+      }
+      ... on NewsArticleModulesImageAndTextBlock {
+        image_and_text_block {
+          cta {
+            href
+            title
+          }
+          title
+          description
+          use_motif_with_background_image
+        }
+      }
+    }
+  }
+}

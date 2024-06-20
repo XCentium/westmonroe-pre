@@ -1,0 +1,25 @@
+query GetNewsArticles {
+  all_news_article(locale: "en-us", limit: 200) {
+    total
+    items {
+      title
+      name
+      date
+      url
+      system {
+        uid
+      }
+      summary_info {
+        summary_title
+        summary_imageConnection {
+          edges {
+            node {
+              title
+              url
+            }
+          }
+        }
+      }
+    }
+  }
+}
