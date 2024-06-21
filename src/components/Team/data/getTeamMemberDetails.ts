@@ -1,5 +1,5 @@
 import Result from '@xc/lib/Result'
-import { westMonroe } from '@xc/shared/clients/contentstack'
+import { westMonroe } from '@xc/shared/src/clients/contentstack'
 import GetTeamMemberDetails from './queries/GetTeamMemberQuery.graphql'
 
 export type TeamMemberDetails = {
