@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { revalidatePath } from 'next/cache'
 import logger from '@xc/lib/logger/server'
 import Result from '@xc/lib/Result'
-import getSitemapItems from '@xc/shared/data/westmonroe/getSitemapItems'
+import getSitemapItems from '@xc/shared/src/data/westmonroe/getSitemapItems'
 
 export async function POST(request: Request) {
   const token = request.headers.get('x-webhook-token')

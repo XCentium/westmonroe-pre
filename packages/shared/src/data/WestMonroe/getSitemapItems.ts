@@ -1,7 +1,7 @@
 import type { SitemapItem } from '@xc/lib/sitemap'
 
 import Result from '@xc/lib/Result'
-import { westMonroe } from '@xc/shared/clients/contentstack'
+import { westMonroe } from '@xc/shared/src/clients/contentstack'
 
 export type SitemapItemsData = SitemapItem[]
 

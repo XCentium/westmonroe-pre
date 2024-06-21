@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import logger from '@xc/lib/logger/server'
 import { toSitemapXML } from '@xc/lib/sitemap'
-import getSitemapItems from '@xc/shared/data/westmonroe/getSitemapItems'
+import getSitemapItems from '@xc/shared/src/data/westmonroe/getSitemapItems'
 
 export { dynamic, revalidate } from '@/ssr'
 
