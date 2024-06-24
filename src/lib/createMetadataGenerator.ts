@@ -1,5 +1,5 @@
 import type { Metadata, ResolvingMetadata } from 'next'
-import type Result from '@xc/lib/src/Result'
+import type Result from '@xc/lib/Result'
 
 export type MetadataGenerator = (
   page: Core.Page,

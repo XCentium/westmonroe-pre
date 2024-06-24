@@ -1,4 +1,4 @@
-import logger from '@xc/lib/src/logger/client'
+import logger from '@xc/lib/logger/client'
 
 import LivePreviewUtils from '@contentstack/live-preview-utils'
 

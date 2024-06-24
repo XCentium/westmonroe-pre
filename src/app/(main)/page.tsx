@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation'
-import createMetadataGenerator from '@xc/lib/src/createMetadataGenerator'
-import getHomePage from '@xc/shared/src/data/westmonroe/getHomePage'
+import createMetadataGenerator from '@xc/lib/createMetadataGenerator'
+import getHomePage from '@xc/shared/data/westmonroe/getHomePage'
 
 import HeroSection from '@/components/HeroSection'
 

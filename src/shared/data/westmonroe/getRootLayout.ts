@@ -1,5 +1,5 @@
-import Result from '@xc/lib/src/Result'
-import { westMonroe } from '@xc/shared/src/clients/contentstack'
+import Result from '@xc/lib/Result'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 
 export type RootLayoutData = Contentstack.Item<{
   image_header_logo: Contentstack.Fields.File

@@ -12,13 +12,13 @@
         "./src/*"
       ],
       "@xc/lib/*": [
-        "./packages/lib/src/*"
+        "./src/lib/*"
       ],
       "@xc/ui/*": [
-        "./packages/ui/src/*"
+        "./src/ui/*"
       ],
       "@xc/shared/*": [
-        "./packages/shared/src/*"
+        "./src/shared/*"
       ]
     },
     "strictNullChecks": true

@@ -1,6 +1,6 @@
-import { createURL } from '@xc/lib/src/http'
-import { createContentstackClient } from '@xc/lib/src/contentstack'
-import { createApolloClient } from '@xc/lib/src/apollo'
+import { createURL } from '@xc/lib/http'
+import { createContentstackClient } from '@xc/lib/contentstack'
+import { createApolloClient } from '@xc/lib/apollo'
 
 export const westMonroe = {
   api: createContentstackClient({

@@ -18,7 +18,7 @@ const settings = {
       apiKey: process.env.NEXT_PUBLIC_ALGOLIA_API_KEY
     },
     indices: {
-      developmentIndex: `development_contentstack`
+      developmentIndex: `dev_wm_contentstack`
   }
 }
 }

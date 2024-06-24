@@ -1,4 +1,4 @@
-import logger from '@xc/lib/src/logger/client'
+import logger from '@xc/lib/logger/client'
 
 const livepreview = process.env.NEXT_PUBLIC_CONTENTSTACK_LIVE_PREVIEW === 'true'
 
