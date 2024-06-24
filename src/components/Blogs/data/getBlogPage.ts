@@ -1,5 +1,5 @@
 import Result from '@xc/lib/Result'
-import { westMonroe } from '@xc/shared/src/clients/contentstack'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 import GetBlogPageQuery from './queries/GetBlogPageQuery.graphql'
 
 export type BlogPageData = {

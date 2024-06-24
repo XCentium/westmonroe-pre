@@ -1,4 +1,4 @@
-import type { RootLayoutData } from '@xc/shared/src/data/westmonroe/getRootLayout'
+import type { RootLayoutData } from '@xc/shared/data/westmonroe/getRootLayout'
 
 import Link from 'next/link'
 import Image from 'next/image'

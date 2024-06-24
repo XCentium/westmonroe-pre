@@ -1,7 +1,7 @@
 import type { LivePreviewQuery } from 'contentstack'
 
 import Result from '@xc/lib/Result'
-import { westMonroe } from '@xc/shared/src/clients/contentstack'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 
 export type HomePageData = Contentstack.Item<{
   hero_section: Contentstack.Globals.HeroSection

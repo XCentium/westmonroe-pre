@@ -1,7 +1,7 @@
 import type { LivePreviewQuery } from 'contentstack'
 
 import Result from '@xc/lib/Result'
-import { westMonroe } from '@xc/shared/src/clients/contentstack'
+import { westMonroe } from '@xc/shared/clients/contentstack'
 
 export type GenericPageData = Contentstack.Item<{
   modular_blocks_main: Record<string, any>[]
