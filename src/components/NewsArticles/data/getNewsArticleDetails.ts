@@ -5,13 +5,13 @@ import GetNewsArticleDetails from './queries/GetNewsArticleDetailsQuery.graphql'
 export type RichText = {
   __typename: string
   use_plain_text_styling: boolean
-  rich_text_editor: string
+  content: string
   is_quote: boolean
 }
 
 export type FullWidthImage = {
   headline: string
-  fileConnection: {
+  imageConnection: {
     edges: [
       {
         node: {
@@ -21,8 +21,8 @@ export type FullWidthImage = {
       },
     ]
   }
-  fullwidth: boolean
-  boolean: boolean
+  full_bleed: boolean
+  no_max_height: boolean
   caption: string
 }
 
@@ -45,16 +45,16 @@ export type NewsArticleDetails = {
           },
         ]
       }
-      global_field: {
+      meta_tags: {
         meta_title: string
         meta_description: string
       }
       url: string
     }
-    modules: [
+    modular_blocks: [
       {
         __typename: string
-        richtext: RichText
+        rich_text: RichText
         image_full_width: FullWidthImage
       },
     ]

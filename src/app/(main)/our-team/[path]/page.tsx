@@ -21,7 +21,7 @@ export default async function Page({
           <div className="flex w-full justify-between bg-violet-800 py-10 group-hover:opacity-75">
             <div>
               <img
-                src={result?.data?.teamMember.pictureConnection.edges[0].node.url}
+                src={result?.data?.teamMember.pictureConnection.edges[0]?.node.url}
                 alt=""
                 className="w-120 h-60 px-6"
               />

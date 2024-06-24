@@ -16,42 +16,42 @@ query GetNewsArticleDetails($uid: String!) {
         }
       }
     }
-    global_field {
+    meta_tags {
       meta_title
       meta_description
     }
     url
-    modules {
+      modular_blocks {
       __typename
-      ... on NewsArticleModulesRichtext {
-        richtext {
+      ... on NewsArticleModularBlocksRichText {
+        rich_text {
           use_plain_text_styling
-          rich_text_editor
+          content
         }
       }
-      ... on NewsArticleModulesRichtext {
-        richtext {
-          rich_text_editor
+      ... on NewsArticleModularBlocksRichText {
+        rich_text {
+          content
           is_quote
         }
       }
-      ... on NewsArticleModulesImageFullWidth {
+      ... on NewsArticleModularBlocksImageFullWidth {
         image_full_width {
           headline
-          fileConnection {
-            edges {
-              node {
-                title
+          imageConnection {
+        edges {
+            node{
+                title,
                 url
-              }
             }
-          }
-          fullwidth
-          boolean
+        }
+      }
+          full_bleed
+          no_max_height
           caption
         }
       }
-      ... on NewsArticleModulesImageAndTextBlock {
+      ... on NewsArticleModularBlocksImageAndTextBlock {
         image_and_text_block {
           cta {
             href

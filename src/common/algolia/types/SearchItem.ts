@@ -5,6 +5,7 @@ export type SearchItem = Readonly<{
   brand_label: string;
   picture: { url: string; title: string };
   short_bio: string;
+  summary_info:{summary_title: string, social_share_image:string, summary_image:"", summary_description:""};
   title:string;
   linkedin_profile: {title:string, href:string}
   uid:string
