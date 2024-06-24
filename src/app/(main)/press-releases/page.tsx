@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation'
-import createMetadataGenerator from '@xc/lib/createMetadataGenerator'
+import createMetadataGenerator from '@xc/lib/src/createMetadataGenerator'
 import getNewsArticles from '@/components/NewsArticles/data/getNewsArticles'
 
 export { dynamic, revalidate } from '@/ssr'

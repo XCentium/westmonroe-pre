@@ -2,8 +2,8 @@ import type { Query, LivePreviewQuery } from 'contentstack'
 
 import { Stack, Region } from 'contentstack'
 import { addEditableTags } from '@contentstack/utils'
-import logger from '@xc/lib/logger/server'
-import Result from '@xc/lib/Result'
+import logger from '@xc/lib/src/logger/server'
+import Result from '@xc/lib/src/Result'
 
 export type Options = {
   key: string
