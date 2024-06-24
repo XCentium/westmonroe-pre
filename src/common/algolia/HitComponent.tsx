@@ -21,12 +21,13 @@ export function HitComponent({ hit }: HitComponentProps) {
           <div className="... row-span-1">
             <h3 className="row-span-1 text-lg font-semibold">
               <a href={hit.url + '?uid=' + hit.uid}>
-                <h3>{hit.title}</h3>
+                <h3>{(hit.first_name && hit.last_name )? hit.first_name+" "+hit.last_name: hit.title}</h3>
               </a>
             </h3>
           </div>
           <div className="... row-span-2">
-            <p>{hit.short_bio}</p>
+            <p>{hit.short_bio ? hit.short_bio: hit.summary_info?.summary_description}</p>
+            <p></p>
           </div>
         </div>
       </div>
