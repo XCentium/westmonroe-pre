@@ -1,8 +1,8 @@
-import type { RootLayoutData } from '@xc/shared/data/westmonroe/getRootLayout'
+import type { RootLayoutData } from '@xc/shared/src/data/westmonroe/getRootLayout'
 
 import Link from 'next/link'
 import Image from 'next/image'
-import Contentstack from '@xc/ui/Contentstack'
+import Contentstack from '@xc/ui/src/Contentstack'
 
 import css from './Header.module.css'
 

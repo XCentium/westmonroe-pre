@@ -1,4 +1,4 @@
-import Result from '@xc/lib/Result'
+import Result from '@xc/lib/src/Result'
 
 export type HTTPClientOptions = Omit<RequestInit, 'method' | 'body'> & {}
 
