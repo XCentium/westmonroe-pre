@@ -61,7 +61,7 @@ export type NewsArticleDetails = {
   }
 }
 export default async function getNewsArticleDetails(uid: string): Promise<Result<NewsArticleDetails>> {
-  console.log('uide form here', uid)
+
   const response = await westMonroe.gql.query({
     query: GetNewsArticleDetails,
     variables: {

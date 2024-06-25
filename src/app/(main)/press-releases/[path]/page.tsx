@@ -14,10 +14,6 @@ export default async function Page({
     if (!result.ok || !result.data) {
       return notFound()
     }
-    //console.log('modules ', result?.data?.newsArticle?.modules)
-    {
-      result?.data?.newsArticle?.modular_blocks?.map((moduleItem) => console.log('module item is', moduleItem.rich_text))
-    }
     return (
       <>
         <div className="overflow-hidden">
@@ -29,9 +25,9 @@ export default async function Page({
           <div className="border-t-2 border-gray-300  lg:flex lg:items-center">
             <div className=" pr-50 ml-80 mt-12 text-gray-600 lg:max-w-xl">
               {result?.data?.newsArticle?.modular_blocks?.map((moduleItem) =>
-                moduleItem?.__typename === 'NewsArticleModulesRichtext' ? (
+                moduleItem?.__typename === 'NewsArticleModularBlocksRichText' ? (
                   moduleItem?.rich_text.is_quote ? (
-                    <div className="border-y border-gray-300 px-12 py-6 text-xl leading-8 text-gray-800">
+                    <div className="border-y border-gray-300 px-8 py-6 text-xl leading-8 text-gray-800">
                       <div dangerouslySetInnerHTML={{ __html: moduleItem.rich_text?.content }}></div>
                     </div>
                   ) : (
@@ -39,7 +35,7 @@ export default async function Page({
                       <div dangerouslySetInnerHTML={{ __html: moduleItem.rich_text?.content }}></div>
                     </div>
                   )
-                ) : moduleItem?.__typename === 'NewsArticleModulesImageFullWidth' ? (
+                ) : moduleItem?.__typename === 'NewsArticleModularBlocksImageFullWidth' ? (
                   <div className="pb-14">
                     <img src={moduleItem?.image_full_width?.imageConnection?.edges[0]?.node?.url} />
                   </div>
