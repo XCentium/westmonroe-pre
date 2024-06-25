@@ -29,7 +29,7 @@ const createAnEntry = async () => {
       ),
     ).then(
       (response) => {
-        console.log('response is', response)
+
         return Result.success(response)
       },
       (error) => {

@@ -16,7 +16,7 @@ export default async function Page({}: Core.Page<{ path: string }>) {
   if (!result.ok || !result.data) {
     return notFound()
   }
-  console.log("result is---", result?.data?.blogPage)
+
   return (
 
 <>

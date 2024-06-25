@@ -13,10 +13,9 @@ const DataMigration = () => {
   const getData = async () => {
     await EntryService.createAnEntry().then((response: any) => {
 
-      console.log("respone from here sdc", response)
 
       if (response != null && response.data != null) {
-         console.log("respone from here", response)
+
 
          response.map((post: any)  => {
 
