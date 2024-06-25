@@ -1,14 +1,14 @@
 import { Highlight } from 'react-instantsearch-hooks-web'
 
 import type { Hit } from 'instantsearch.js'
-import type { SearchItem } from './types/SearchItem'
+import type { SearchItem } from '../types/SearchItem'
 import 'instantsearch.css/themes/satellite.css'
 
 type HitComponentProps = {
   hit: Hit<SearchItem>
 }
 
-export function HitComponent({ hit }: HitComponentProps) {
+export function Hit({ hit }: HitComponentProps) {
   return (
     <div className="group relative order-last" key={hit.objectID}>
       <div key={hit.title} className="group relative flex justify-between">
@@ -18,6 +18,16 @@ export function HitComponent({ hit }: HitComponentProps) {
           </a>
         </div>
         <div className="grid grid-rows-2 ml-5">
+        <h3 className="mt-4 text-sm text-gray-700 line-clamp-3">
+            <Highlight
+              hit={hit}
+              attribute="title"
+              classNames={{
+                highlighted:
+                  'bg-indigo-50 rounded-sm px-0.5 text-indigo-600 font-semibold',
+              }}
+            />
+          </h3>
           <div className="... row-span-1">
             <h3 className="row-span-1 text-lg font-semibold">
               <a href={hit.url + '?uid=' + hit.uid}>
